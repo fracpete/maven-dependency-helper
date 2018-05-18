@@ -15,7 +15,7 @@
 
 /*
  * DependencyHelper.java
- * Copyright (C) 2018 University of Waikato, Hamilton, NZ
+ * Copyright (C) 2018 FracPete
  */
 
 package com.github.fracpete.maven;
@@ -23,7 +23,7 @@ package com.github.fracpete.maven;
 /**
  * TODO: What class does.
  *
- * @author FracPete (fracpete at waikato dot ac dot nz)
+ * @author FracPete (fracpete at gmail dot com)
  */
 public class DependencyHelper {
 
