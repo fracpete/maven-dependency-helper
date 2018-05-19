@@ -47,7 +47,7 @@ optional arguments:
 The following example queries Maven Central for a single jar.
 
 ```
-java com.github.fracpete.maven.DependencyHelper \
+java -jar maven-dependency-helper-0.0.1-spring-boot.jar \
   --jar /some/where/5.3/iscwt-5.3.jar \
 ```
 
@@ -68,7 +68,7 @@ For processing all jars in a directory, but skip ones that contain `-sources`
 or `-javdadoc` you can use something like this:
 
 ```
-java com.github.fracpete.maven.DependencyHelper \
+java -jar maven-dependency-helper-0.0.1-spring-boot.jar \
   --dir /some/dir/ \
   --exclude ".*(-sources|-javadoc).*"
 ```
