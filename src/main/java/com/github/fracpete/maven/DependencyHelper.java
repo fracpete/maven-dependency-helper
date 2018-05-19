@@ -744,7 +744,7 @@ public class DependencyHelper
       .required(false)
       .type(Integer.class)
       .action(Arguments.store())
-      .help("The verbosity level for logging output.");
+      .help("The verbosity level for logging output, 0 to turn off logging.");
 
     ns = null;
     try {
