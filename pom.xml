@@ -16,6 +16,10 @@
 
   <name>maven-dependency-helper</name>
   <description>Tools for outputting dependency tags for jars.</description>
+  <organization>
+    <name>University of Waikato, Hamilton, NZ</name>
+    <url>http://www.waikato.ac.nz/</url>
+  </organization>
   <licenses>
     <license>
       <name>GNU General Public License 3</name>
@@ -27,8 +31,10 @@
     <developer>
       <id>fracpete</id>
       <name>Peter Reutemann</name>
-      <email>fracpete@gmail.com</email>
-      <url>http://open.fracpete.org/</url>
+      <email>fracpete@waikato.ac.nz</email>
+      <url>http://www.cms.waikato.ac.nz/~fracpete/</url>
+      <organization>University of Waikato, CS department</organization>
+      <organizationUrl>http://www.cs.waikato.ac.nz/</organizationUrl>
       <roles>
         <role>developer</role>
       </roles>
@@ -99,6 +105,12 @@
       <groupId>net.sourceforge.argparse4j</groupId>
       <artifactId>argparse4j</artifactId>
       <version>0.6.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.4</version>
     </dependency>
   </dependencies>
 
