@@ -48,7 +48,7 @@ The following example queries Maven Central for a single jar.
 
 ```
 java -jar maven-dependency-helper-0.0.1-spring-boot.jar \
-  --jar /some/where/5.3/iscwt-5.3.jar \
+  --jar /some/where/5.3/iscwt-5.3.jar
 ```
 
 Which results in the following output:
@@ -102,3 +102,8 @@ Add the following artifact to your dependencies of your `pom.xml`:
     </dependency>
 ```
 
+## Releases
+
+The following releases are available:
+
+* [0.0.1](https://github.com/fracpete/maven-dependency-helper/releases/download/maven-dependency-helper-0.0.1/maven-dependency-helper-0.0.1-spring-boot.jar)
