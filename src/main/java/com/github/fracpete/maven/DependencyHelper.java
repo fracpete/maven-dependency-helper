@@ -580,11 +580,12 @@ public class DependencyHelper
   /**
    * Parses the JSON response from Maven Central.
    *
+   * @param jar		the jar to process
    * @param json	the json response object
    * @param errors	for storing errors
    * @return		the dependency snippet, null in case of error
    */
-  protected String extractDependency(JsonObject json, List<String> errors) {
+  protected String extractDependency(String jar, JsonObject json, List<String> errors) {
     String	result;
     int 	status;
     JsonObject	response;
@@ -607,7 +608,8 @@ public class DependencyHelper
 	  ver  = doc.get("v").getAsString();
 	  type = doc.get("p").getAsString();
 	  log("extract dep", "gid=" + gid + ", aid=" + aid + ", ver=" + ver + ", type=" + type, 3);
-	  result = "<dependency>\n"
+	  result = "<!-- " + jar + " -->\n"
+            + "<dependency>\n"
 	    + "  <groupId>" + gid + "</groupId>\n"
 	    + "  <artifactId>" + aid + "</artifactId>\n"
 	    + "  <version>" + ver + "</version>\n";
@@ -616,11 +618,11 @@ public class DependencyHelper
 	  result += "</dependency>";
 	}
 	else {
-          errors.add("Found # artifacts: " + response.get("numFound").getAsInt());
+          errors.add("Found " + response.get("numFound").getAsInt() + " artifacts for: " + jar);
 	}
       }
       else {
-        errors.add("Status code: " + status);
+        errors.add("Status code " + status + " for: " + jar);
       }
     }
 
@@ -646,7 +648,7 @@ public class DependencyHelper
     if (json == null)
       return null;
 
-    return extractDependency(json.getAsJsonObject(), errors);
+    return extractDependency(jar, json.getAsJsonObject(), errors);
   }
 
   /**
