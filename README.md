@@ -47,13 +47,14 @@ optional arguments:
 The following example queries Maven Central for a single jar.
 
 ```
-java -jar maven-dependency-helper-0.0.1-spring-boot.jar \
+java -jar maven-dependency-helper-0.0.2-spring-boot.jar \
   --jar /some/where/5.3/iscwt-5.3.jar
 ```
 
 Which results in the following output:
 
 ```xml
+<!-- /some/where/5.3/iscwt-5.3.jar -->
 <dependency>
   <groupId>de.intarsys.opensource</groupId>
   <artifactId>iscwt</artifactId>
@@ -68,7 +69,7 @@ For processing all jars in a directory, but skip ones that contain `-sources`
 or `-javdadoc` you can use something like this:
 
 ```
-java -jar maven-dependency-helper-0.0.1-spring-boot.jar \
+java -jar maven-dependency-helper-0.0.2-spring-boot.jar \
   --dir /some/dir/ \
   --exclude ".*(-sources|-javadoc).*"
 ```
@@ -76,11 +77,13 @@ java -jar maven-dependency-helper-0.0.1-spring-boot.jar \
 Which will generate output like this:
 
 ```xml
+<!-- /some/where/5.3/iscwt-5.3.jar -->
 <dependency>
   <groupId>de.intarsys.opensource</groupId>
   <artifactId>iscwt</artifactId>
   <version>5.3</version>
 </dependency>
+<!-- /some/where/5.3/isfreetype-5.3.jar -->
 <dependency>
   <groupId>de.intarsys.opensource</groupId>
   <artifactId>isfreetype</artifactId>
@@ -98,7 +101,7 @@ Add the following artifact to your dependencies of your `pom.xml`:
     <dependency>
       <groupId>com.github.fracpete</groupId>
       <artifactId>maven-dependency-helper</artifactId>
-      <version>0.0.1</version>
+      <version>0.0.2</version>
     </dependency>
 ```
 
@@ -106,4 +109,5 @@ Add the following artifact to your dependencies of your `pom.xml`:
 
 The following releases are available:
 
+* [0.0.2](https://github.com/fracpete/maven-dependency-helper/releases/download/maven-dependency-helper-0.0.2/maven-dependency-helper-0.0.2-spring-boot.jar)
 * [0.0.1](https://github.com/fracpete/maven-dependency-helper/releases/download/maven-dependency-helper-0.0.1/maven-dependency-helper-0.0.1-spring-boot.jar)
