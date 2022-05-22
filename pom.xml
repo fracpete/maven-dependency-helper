@@ -5,7 +5,7 @@
 
   <groupId>com.github.fracpete</groupId>
   <artifactId>maven-dependency-helper</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
   <packaging>jar</packaging>
 
   <parent>
@@ -89,7 +89,7 @@
     <connection>scm:git:ssh://git@github.com/fracpete/maven-dependency-helper</connection>
     <developerConnection>scm:git:ssh://git@github.com/fracpete/maven-dependency-helper</developerConnection>
     <url>https://github.com/fracpete/maven-dependency-helper</url>
-    <tag>HEAD</tag>
+    <tag>maven-dependency-helper-0.0.3</tag>
   </scm>
 
   <dependencies>
