@@ -15,7 +15,7 @@
 
 /*
  * DependencyHelper.java
- * Copyright (C) 2018 University of Waikato, Hamilton, NZ
+ * Copyright (C) 2018-2022 University of Waikato, Hamilton, NZ
  * Copyright (C) 2006 Dr. Herong Yang, http://www.herongyang.com/
  */
 
