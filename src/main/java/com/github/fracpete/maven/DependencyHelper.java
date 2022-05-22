@@ -58,7 +58,7 @@ public class DependencyHelper
   private static final long serialVersionUID = 3161026268021202145L;
 
   /** hexadecimal digits. */
-  public static final char HEX_DIGIT[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+  public static final char[] HEX_DIGIT = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
   /** the hash placeholder. */
   public final static String PH_HASH = "{HASH}";
@@ -686,7 +686,7 @@ public class DependencyHelper
     ArgumentParser 	parser;
     Namespace 		ns;
 
-    parser = ArgumentParsers.newArgumentParser(DependencyHelper.class.getName());
+    parser = ArgumentParsers.newFor(DependencyHelper.class.getName()).build();
     parser.description("Tools for outputting Maven dependency snippets generated from arbitrary jars.\n"
       + "For this to work, the jars must be available from Maven Central.\n"
       + "The include/exclude order is: apply include and apply exclude.\n"
