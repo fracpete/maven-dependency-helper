@@ -9,3 +9,5 @@ How to make a release
   ```
 
 * Push all changes
+* Create a new release on Github using the Maven-generated tag
+* Add notes and upload the `*-spring-boot.jar` artifact from the `target` directory
